@@ -28,7 +28,7 @@ class CustomFileLogger: FileLogger() {
 // Вместо этого унаследуем метод logError:
 open class FileLogger {
 
-    fun logError(error: String) {
+    abstract fun logError(error: String) {
         val file = File("errors.txt")
         file.appendText(
             text = error
